@@ -16,7 +16,7 @@ public class TH_Tuan3 {
         System.out.print("Nhap so luong: ");
         int soLuong = sc.nextInt();
         System.out.println();
-        System.out.println("===== THONG TIN SACH =====");
+        System.out.println("THONG TIN SACH");
         System.out.println("Ma sach: " + maSach);
         System.out.println("Ten sach: " + tenSach);
         System.out.println("Tac gia: " + tacGia);
@@ -37,52 +37,81 @@ public class TH_Tuan3 {
 
         boolean hopLe = true;
 
-        if (donGia > 0) {
+        if (donGia > 0) 
+            {
             System.out.println("Don gia hop le.");
-        } else {
+            } 
+        else 
+            {
             System.out.println("Don gia khong hop le (phai > 0).");
             hopLe = false;
-        }
+            }
 
-        if (soLuong >= 0) {
-            System.out.println("So luong hop le.");
-        } else {
-            System.out.println("So luong khong hop le (phai >= 0).");
-            hopLe = false;
-        }
-        if (namXuatBan >= 1900 && namXuatBan <= 2026) {
-            System.out.println("Nam xuat ban hop le.");
-        } else {
-            System.out.println("Nam xuat ban khong hop le (phai tu 1900 den 2026).");
-            hopLe = false;
-        }
+        if (soLuong >= 0) 
+            {
+                System.out.println("So luong hop le.");
+            } 
+            else 
+            {
+                System.out.println("So luong khong hop le (phai >= 0).");
+                hopLe = false;
+            }
+        if (namXuatBan >= 1900 && namXuatBan <= 2026) 
+            {
+                System.out.println("Nam xuat ban hop le.");
+            } 
+            else 
+            {
+                System.out.println("Nam xuat ban khong hop le (phai tu 1900 den 2026).");
+                hopLe = false;
+            }
 
-        if (hopLe) {
+        if (hopLe) 
+            {
             System.out.println("=> Sach hop le.");
 
-            if (donGia < 50000) {
-                System.out.println("Phan loai gia: Sach gia thap");
-            } else if (donGia <= 100000) {
-                System.out.println("Phan loai gia: Sach gia trung binh");
-            } else if (donGia <= 200000) {
-                System.out.println("Phan loai gia: Sach gia cao");
-            } else {
-                System.out.println("Phan loai gia: Sach gia dac biet");
-            }
+            if (donGia < 50000) 
+                {
+                    System.out.println("Phan loai gia: Sach gia thap");
+                } 
+                else 
+                    if (donGia <= 100000) 
+                        {
+                            System.out.println("Phan loai gia: Sach gia trung binh");
+                        } 
+                        else 
+                            if (donGia <= 200000) 
+                                {
+                                    System.out.println("Phan loai gia: Sach gia cao");
+                                } 
+                                else 
+                                    {
+                                        System.out.println("Phan loai gia: Sach gia dac biet");
+                                    }
 
-            if (soLuong == 0) {
-                System.out.println("Ton kho: Het sach");
-            } else if (soLuong <= 5) {
-                System.out.println("Ton kho: Sap het");
-            } else if (soLuong <= 20) {
-                System.out.println("Ton kho: Con it");
-            } else {
-                System.out.println("Ton kho: Con nhieu");
+            if (soLuong == 0) 
+                {
+                    System.out.println("Ton kho: Het sach");
+                } 
+                else   
+                    if (soLuong <= 5) 
+                        {
+                            System.out.println("Ton kho: Sap het");
+                        } 
+                    else 
+                        if (soLuong <= 20) 
+                            {
+                                System.out.println("Ton kho: Con it");
+                        } 
+                else 
+                    {
+                        System.out.println("Ton kho: Con nhieu");
+                    }
+        } 
+        else 
+            {
+                System.out.println("=> Sach khong hop le, khong the phan loai gia va ton kho.");
             }
-        } else {
-            System.out.println("=> Sach khong hop le, khong the phan loai gia va ton kho.");
-        }
-
         System.out.println();
         System.out.println("Chon loai sach:");
         System.out.println("1. Sach giao khoa");
