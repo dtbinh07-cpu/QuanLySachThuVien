@@ -20,63 +20,48 @@ public class Sach {
         this.donGia = donGia;
         this.soLuong = soLuong;
     }
-
     public String getMaSach() {
         return maSach;
     }
-
     public String getTenSach() {
         return tenSach;
     }
-
     public String getTacGia() {
         return tacGia;
     }
-
     public int getNamXuatBan() {
         return namXuatBan;
     }
-
     public double getDonGia() {
         return donGia;
     }
-
     public int getSoLuong() {
         return soLuong;
     }
-
     public int getLoaiSach() {
         return loaiSach;
     }
-
     public void setMaSach(String maSach) {
         this.maSach = maSach;
     }
-
     public void setTenSach(String tenSach) {
         this.tenSach = tenSach;
     }
-
     public void setTacGia(String tacGia) {
         this.tacGia = tacGia;
     }
-
     public void setNamXuatBan(int namXuatBan) {
         this.namXuatBan = namXuatBan;
     }
-
     public void setDonGia(double donGia) {
         this.donGia = donGia;
     }
-
     public void setSoLuong(int soLuong) {
         this.soLuong = soLuong;
     }
-
     public void setLoaiSach(int loaiSach) {
         this.loaiSach = loaiSach;
     }
-
     public void nhap(Scanner sc) {
         System.out.print("Nhap ma sach: ");
         maSach = sc.nextLine();
@@ -91,7 +76,6 @@ public class Sach {
         System.out.print("Nhap so luong: ");
         soLuong = sc.nextInt();
     }
-
     public void hienThi() {
         System.out.println("Ma sach: " + maSach);
         System.out.println("Ten sach: " + tenSach);
@@ -100,22 +84,17 @@ public class Sach {
         System.out.println("Don gia: " + donGia);
         System.out.println("So luong: " + soLuong);
     }
-
     public double tinhThanhTien() {
         return donGia * soLuong;
     }
-
     public double tinhPhiVanChuyen() {
         return tinhThanhTien() * 5 / 100;
     }
-
     public double tinhTongTienNhap() {
         return tinhThanhTien() + tinhPhiVanChuyen();
     }
-
     public boolean kiemTraHopLe() {
         boolean hopLe = true;
-
         if (donGia > 0)
             {
                 System.out.println("Don gia hop le.");
@@ -148,7 +127,6 @@ public class Sach {
 
         return hopLe;
     }
-
     public void phanLoaiGia() {
         if (donGia < 50000)
             {
@@ -169,7 +147,6 @@ public class Sach {
                         System.out.println("Phan loai gia: Sach gia dac biet");
                     }
     }
-
     public void phanLoaiTonKho() {
         if (soLuong == 0)
             {
@@ -190,7 +167,6 @@ public class Sach {
                         System.out.println("Ton kho: Con nhieu");
                     }
     }
-
     public void chonLoaiSach(Scanner sc) {
         System.out.println("Chon loai sach:");
         System.out.println("1. Sach giao khoa");
@@ -199,7 +175,6 @@ public class Sach {
         System.out.println("4. Sach khac");
         System.out.print("Nhap lua chon: ");
         loaiSach = sc.nextInt();
-
         switch (loaiSach) {
             case 1:
                 System.out.println("Loai sach: Sach giao khoa");
